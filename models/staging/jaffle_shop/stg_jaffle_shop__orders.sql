@@ -9,14 +9,14 @@ source as (
 renamed as (
 
     select
-        id,
-        user_id,
+        id as order_id,
+        user_id as customer_id,
         order_date,
-        status,
+        status as order_status,
         _etl_loaded_at
 
     from source
 
 )
 
-select * from renamed
+select distinct order_status from renamed
