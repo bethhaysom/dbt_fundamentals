@@ -19,4 +19,4 @@ renamed as (
 
 )
 
-select distinct order_status from renamed
+select * from renamed
